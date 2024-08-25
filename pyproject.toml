@@ -1,0 +1,34 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fortnite_machine"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+fortnite-machine = "fortnite_machine.__main__:main"
+
+[tool.kedro]
+package_name = "fortnite_machine"
+project_name = "Fortnite_machine"
+kedro_init_version = "0.19.7"
+tools = [ "None",]
+example_pipeline = "True"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "fortnite_machine.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "c29f0781e4994e15b3a79f7e3e13c844"
