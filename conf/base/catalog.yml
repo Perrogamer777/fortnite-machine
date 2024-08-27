@@ -70,6 +70,6 @@ regressor:
   filepath: data/06_models/regressor.pickle
   versioned: true
 
-Fortnite_Statistics:
+Fortnite_players_stats:
   type: pandas.CSVDataset
-  filepath: data/Fortnite_Statistics.csv
+  filepath: data/Fortnite_players_stats.csv
